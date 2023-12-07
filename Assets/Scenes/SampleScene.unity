@@ -1043,6 +1043,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 907680117}
+--- !u!114 &2138627233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7902163773224303819, guid: 444e4d9ff6ae0ef4a9c0031d58830e1e,
+    type: 3}
+  m_PrefabInstance: {fileID: 679227985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa7bef8610cf1a64bbbefd28fded180c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1787801618962059229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1103,6 +1115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7902163773224303819, guid: 444e4d9ff6ae0ef4a9c0031d58830e1e,
         type: 3}
+      propertyPath: testing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902163773224303819, guid: 444e4d9ff6ae0ef4a9c0031d58830e1e,
+        type: 3}
       propertyPath: tomatoPrefab
       value: 
       objectReference: {fileID: 9117758950412088956, guid: d7702a712cc4a7447b3881af8c56f072,
@@ -1112,6 +1129,11 @@ PrefabInstance:
       propertyPath: counterTopPoint
       value: 
       objectReference: {fileID: 1787801618962059230}
+    - target: {fileID: 7902163773224303819, guid: 444e4d9ff6ae0ef4a9c0031d58830e1e,
+        type: 3}
+      propertyPath: secondClearCounter
+      value: 
+      objectReference: {fileID: 2138627233}
     - target: {fileID: 7929681066346863161, guid: 444e4d9ff6ae0ef4a9c0031d58830e1e,
         type: 3}
       propertyPath: m_Name
