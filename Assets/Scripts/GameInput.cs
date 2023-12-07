@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameInput : MonoBehaviour {
 
 
-     private PlayerInputActions playerInputActions;
+    private PlayerInputActions playerInputActions;
 
 
     private void Awake() {
@@ -14,8 +14,7 @@ public class GameInput : MonoBehaviour {
     }
 
     public Vector2 GetMovementVectorNormalized() {
-         Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
-
+        Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
 
         inputVector = inputVector.normalized;
 
