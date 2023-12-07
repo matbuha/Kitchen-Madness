@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClearCounter : MonoBehaviour, IKitchenObjectParent {
+public class ContainerCounter : MonoBehaviour, IKitchenObjectParent {
 
 
     [SerializeField] private KitchenObjectSO kitchenObjectSO;
@@ -10,7 +10,6 @@ public class ClearCounter : MonoBehaviour, IKitchenObjectParent {
 
 
     private KitchenObject kitchenObject;
-
 
     public void Interact(Player player) {
         if (kitchenObject == null) {
@@ -41,4 +40,6 @@ public class ClearCounter : MonoBehaviour, IKitchenObjectParent {
     public bool HasKitchenObject() {
         return kitchenObject != null;
     }
+
+
 }
