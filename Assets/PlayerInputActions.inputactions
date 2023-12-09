@@ -157,8 +157,30 @@
                 },
                 {
                     "name": "",
+                    "id": "627c77f2-d96b-46af-bb3f-c1c12ba894fe",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b7518040-f537-4fce-8777-9fad26fafe10",
                     "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractAlternate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "19b07b66-5d0a-4ddb-8301-f3032fd17cfd",
+                    "path": "<Keyboard>/2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
