@@ -25,13 +25,12 @@ public class SelectedCounterVisual : MonoBehaviour {
         foreach (GameObject visualGameObject in visualGameObjectArray) {
             visualGameObject.SetActive(true);
         }
-        
     }
 
     private void Hide() {
         foreach (GameObject visualGameObject in visualGameObjectArray) {
             visualGameObject.SetActive(false);
         }
-        
     }
+
 }

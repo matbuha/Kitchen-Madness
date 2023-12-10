@@ -970,7 +970,7 @@ PrefabInstance:
     - target: {fileID: 8839242215206057202, guid: 843a2500121a24146b38ca3f1ef2f6fe,
         type: 3}
       propertyPath: m_Name
-      value: CuttingCounter (1)
+      value: CuttingCounter(2)
       objectReference: {fileID: 0}
     - target: {fileID: 8868823956284388441, guid: 843a2500121a24146b38ca3f1ef2f6fe,
         type: 3}
@@ -1226,6 +1226,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3194044623780258473, guid: 93ea09c38530b354089f5c94a054f32b,
     type: 3}
   m_PrefabInstance: {fileID: 871224390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &898729239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2310593395205857568, guid: a424c3f6afbe4e94cb5e9e41ea3eab1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1471736170}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &907680116
 GameObject:
@@ -1840,7 +1846,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1602880684}
     m_Modifications:
     - target: {fileID: 1147898157880808910, guid: a424c3f6afbe4e94cb5e9e41ea3eab1a,
         type: 3}
@@ -2117,6 +2123,7 @@ Transform:
   - {fileID: 543391713}
   - {fileID: 159834642}
   - {fileID: 407728157}
+  - {fileID: 898729239}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1645775112
@@ -2185,7 +2192,7 @@ PrefabInstance:
     - target: {fileID: 8839242215206057202, guid: 843a2500121a24146b38ca3f1ef2f6fe,
         type: 3}
       propertyPath: m_Name
-      value: CuttingCounter
+      value: CuttingCounter(1)
       objectReference: {fileID: 0}
     - target: {fileID: 8868823956284388441, guid: 843a2500121a24146b38ca3f1ef2f6fe,
         type: 3}
@@ -2911,4 +2918,3 @@ SceneRoots:
   - {fileID: 2061711125}
   - {fileID: 270521328}
   - {fileID: 1602880684}
-  - {fileID: 1471736170}
