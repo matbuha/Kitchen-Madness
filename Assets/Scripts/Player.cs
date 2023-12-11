@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour, IKitchenObjectParent {
 
 
+    public event EventHandler OnPickedSomething;
     public static Player Instance { get; private set; }
 
 
@@ -146,6 +147,10 @@ public class Player : MonoBehaviour, IKitchenObjectParent {
 
     public void SetKitchenObject(KitchenObject kitchenObject) {
         this.kitchenObject = kitchenObject;
+
+        if (kitchenObject != null) {
+            OnPickedSomething?.Invoke(this, EventArgs.Empty);
+        }
     }
 
     public KitchenObject GetKitchenObject() {
@@ -160,4 +165,4 @@ public class Player : MonoBehaviour, IKitchenObjectParent {
         return kitchenObject != null;
     }
 
-}
+} 
