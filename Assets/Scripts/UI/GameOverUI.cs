@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameOverUI : MonoBehaviour {
 
-    [SerializeField] private TextMeshProUGUI recipesDeliveredText;
 
+    [SerializeField] private TextMeshProUGUI recipesDeliveredText;
 
 
     private void Start() {
         KitchenGameManager.Instance.OnStateChanged += KitchenGameManager_OnStateChanged;
+
         Hide();
     }
 

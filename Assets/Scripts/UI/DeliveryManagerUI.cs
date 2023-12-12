@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,17 +14,17 @@ public class DeliveryManagerUI : MonoBehaviour {
     }
 
     private void Start() {
-        DeliveryManager.Instance.OnRecipeSpawned += Delivery6Manager_OnRecipeSpawned;
-        DeliveryManager.Instance.OnRecipeCompleted += Delivery6Manager_OnRecipeCompleted;
+        DeliveryManager.Instance.OnRecipeSpawned += DeliveryManager_OnRecipeSpawned;
+        DeliveryManager.Instance.OnRecipeCompleted += DeliveryManager_OnRecipeCompleted;
 
         UpdateVisual();
     }
 
-    private void Delivery6Manager_OnRecipeCompleted(object sender, EventArgs e) {
+    private void DeliveryManager_OnRecipeCompleted(object sender, System.EventArgs e) {
         UpdateVisual();
     }
 
-    private void Delivery6Manager_OnRecipeSpawned(object sender, EventArgs e) {
+    private void DeliveryManager_OnRecipeSpawned(object sender, System.EventArgs e) {
         UpdateVisual();
     }
 

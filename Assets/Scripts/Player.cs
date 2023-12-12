@@ -6,11 +6,11 @@ using UnityEngine;
 public class Player : MonoBehaviour, IKitchenObjectParent {
 
 
-    public event EventHandler OnPickedSomething;
     public static Player Instance { get; private set; }
 
 
 
+    public event EventHandler OnPickedSomething;
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
     public class OnSelectedCounterChangedEventArgs : EventArgs {
         public BaseCounter selectedCounter;
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent {
         gameInput.OnInteractAlternateAction += GameInput_OnInteractAlternateAction;
     }
 
-    private void GameInput_OnInteractAlternateAction(object sender, System.EventArgs e) {
+    private void GameInput_OnInteractAlternateAction(object sender, EventArgs e) {
         if (!KitchenGameManager.Instance.IsGamePlaying()) return;
 
         if (selectedCounter != null) {
@@ -51,7 +51,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent {
 
     private void GameInput_OnInteractAction(object sender, System.EventArgs e) {
         if (!KitchenGameManager.Instance.IsGamePlaying()) return;
-        
+
         if (selectedCounter != null) {
             selectedCounter.Interact(this);
         }
@@ -169,4 +169,4 @@ public class Player : MonoBehaviour, IKitchenObjectParent {
         return kitchenObject != null;
     }
 
-} 
+}

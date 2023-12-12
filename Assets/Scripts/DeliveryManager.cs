@@ -12,7 +12,7 @@ public class DeliveryManager : MonoBehaviour {
     public event EventHandler OnRecipeFailed;
 
 
-    public static DeliveryManager Instance {get; private set; }
+    public static DeliveryManager Instance { get; private set; }
 
 
     [SerializeField] private RecipeListSO recipeListSO;
@@ -24,10 +24,11 @@ public class DeliveryManager : MonoBehaviour {
     private int waitingRecipesMax = 4;
     private int successfulRecipesAmount;
 
+
     private void Awake() {
         Instance = this;
 
-        
+
         waitingRecipeSOList = new List<RecipeSO>();
     }
 
@@ -36,8 +37,7 @@ public class DeliveryManager : MonoBehaviour {
         if (spawnRecipeTimer <= 0f) {
             spawnRecipeTimer = spawnRecipeTimerMax;
 
-
-            if (waitingRecipeSOList .Count < waitingRecipesMax) {
+            if (waitingRecipeSOList.Count < waitingRecipesMax) {
                 RecipeSO waitingRecipeSO = recipeListSO.recipeSOList[UnityEngine.Random.Range(0, recipeListSO.recipeSOList.Count)];
 
                 waitingRecipeSOList.Add(waitingRecipeSO);
@@ -47,19 +47,18 @@ public class DeliveryManager : MonoBehaviour {
         }
     }
 
-
     public void DeliverRecipe(PlateKitchenObject plateKitchenObject) {
         for (int i = 0; i < waitingRecipeSOList.Count; i++) {
             RecipeSO waitingRecipeSO = waitingRecipeSOList[i];
 
             if (waitingRecipeSO.kitchenObjectSOList.Count == plateKitchenObject.GetKitchenObjectSOList().Count) {
-                // has the same number of ingredient
+                // Has the same number of ingredients
                 bool plateContentsMatchesRecipe = true;
                 foreach (KitchenObjectSO recipeKitchenObjectSO in waitingRecipeSO.kitchenObjectSOList) {
-                    // Cycling through all ingredient in the recipe
+                    // Cycling through all ingredients in the Recipe
                     bool ingredientFound = false;
                     foreach (KitchenObjectSO plateKitchenObjectSO in plateKitchenObject.GetKitchenObjectSOList()) {
-                        // Cycling through all ingredient in the plate
+                        // Cycling through all ingredients in the Plate
                         if (plateKitchenObjectSO == recipeKitchenObjectSO) {
                             // Ingredient matches!
                             ingredientFound = true;
@@ -67,7 +66,7 @@ public class DeliveryManager : MonoBehaviour {
                         }
                     }
                     if (!ingredientFound) {
-                        // this Recipe ingredient was not founf on the plate
+                        // This Recipe ingredient was not found on the Plate
                         plateContentsMatchesRecipe = false;
                     }
                 }
@@ -87,7 +86,7 @@ public class DeliveryManager : MonoBehaviour {
         }
 
         // No matches found!
-        // player did not deliver a correct recipe
+        // Player did not deliver a correct recipe
         OnRecipeFailed?.Invoke(this, EventArgs.Empty);
     }
 
@@ -98,4 +97,5 @@ public class DeliveryManager : MonoBehaviour {
     public int GetSuccessfulRecipesAmount() {
         return successfulRecipesAmount;
     }
+
 }

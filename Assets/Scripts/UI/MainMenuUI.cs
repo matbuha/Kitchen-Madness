@@ -13,15 +13,13 @@ public class MainMenuUI : MonoBehaviour {
 
     private void Awake() {
         playButton.onClick.AddListener(() => {
-            // Click
             Loader.Load(Loader.Scene.GameScene);
         });
         quitButton.onClick.AddListener(() => {
-            // Click
             Application.Quit();
         });
 
+        Time.timeScale = 1f;
     }
-
 
 }
