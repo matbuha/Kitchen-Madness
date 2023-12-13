@@ -3,5 +3,5 @@ A unity engine game, created by me, and originally developed by the legendery "c
 if you want to create this project from scratch, you can go to: https://unitycodemonkey.com/kitchenchaoscourse.php#importingAssets
 
 This project created from scratch.
-[![Video Title](http://img.youtube.com/vi/U69fDbGqcDs/0.jpg)](http://www.youtube.com/watch?v=U69fDbGqcDs "Kitchen Madness")
 
+![Alt text for your GIF](https://github.com/matbuha/Kitchen-Madness/blob/main/Assets/_Assets/Animations/ShortVid.gif)
