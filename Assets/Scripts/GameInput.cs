@@ -1,24 +1,37 @@
+/*
+This script manages input actions for a Unity game, providing functionality to handle player inputs,
+such as movement, interaction, and pausing.
+It uses the new Unity Input System to define and handle these actions.
+The script includes event handlers for specific input actions and provides methods to get movement vectors and rebind keys.
+It also saves and loads custom key bindings using PlayerPrefs.
+The script uses a singleton pattern for easy access from other scripts.
+*/
+
+// Import necessary namespaces for Unity functionality and input system
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// Declare a public class 'GameInput' that inherits from 'MonoBehaviour'
 public class GameInput : MonoBehaviour {
 
+    // Define a constant for player preference key
     private const string PLAYER_PREFS_BINDINGS = "InputBindings";
 
 
+    // Singleton instance of GameInput
     public static GameInput Instance { get; private set; }
 
 
-
+    // Events for different player actions
     public event EventHandler OnInteractAction;
     public event EventHandler OnInteractAlternateAction;
     public event EventHandler OnPauseAction;
 
 
-
+    // Enum to define different types of input bindings
     public enum Binding {
         Move_Up,
         Move_Down,
@@ -31,56 +44,65 @@ public class GameInput : MonoBehaviour {
         Gamepad_InteractAlternate,
         Gamepad_Pause,
     }
+
+    // Instance of generated input actions class
     private PlayerInputActions playerInputActions;
 
-
+    // Define the Awake method which is called when the script instance is being loaded
     private void Awake() {
-        Instance = this;
+        Instance = this; // Assign this instance to the singleton instance
 
-
+        // Initialize the PlayerInputActions
         playerInputActions = new PlayerInputActions();
 
+        // Load saved binding overrides if they exist
         if (PlayerPrefs.HasKey(PLAYER_PREFS_BINDINGS)) {
             playerInputActions.LoadBindingOverridesFromJson(PlayerPrefs.GetString(PLAYER_PREFS_BINDINGS));
         }
 
+        // Enable the player input actions
         playerInputActions.Player.Enable();
 
+        // Subscribe to input action events
         playerInputActions.Player.Interact.performed += Interact_performed;
         playerInputActions.Player.InteractAlternate.performed += InteractAlternate_performed;
         playerInputActions.Player.Pause.performed += Pause_performed;
     }
 
+    // Define the OnDestroy method which is called when the script is destroyed
     private void OnDestroy() {
+        // Unsubscribe from input action events
         playerInputActions.Player.Interact.performed -= Interact_performed;
         playerInputActions.Player.InteractAlternate.performed -= InteractAlternate_performed;
         playerInputActions.Player.Pause.performed -= Pause_performed;
 
+        // Dispose the player input actions
         playerInputActions.Dispose();
     }
 
+    // Event handler methods for different player actions
     private void Pause_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
-        OnPauseAction?.Invoke(this, EventArgs.Empty);
+        OnPauseAction?.Invoke(this, EventArgs.Empty); // Invoke pause action event
     }
 
     private void InteractAlternate_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
-        OnInteractAlternateAction?.Invoke(this, EventArgs.Empty);
+        OnInteractAlternateAction?.Invoke(this, EventArgs.Empty); // Invoke alternate interact action event
     }
 
     private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
-        OnInteractAction?.Invoke(this, EventArgs.Empty);
+        OnInteractAction?.Invoke(this, EventArgs.Empty); // Invoke interact action event
     }
 
+    // Method to get the normalized movement vector from the input system
     public Vector2 GetMovementVectorNormalized() {
         Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
-
-        inputVector = inputVector.normalized;
-
+        inputVector = inputVector.normalized; // Normalize the input vector
         return inputVector;
     }
 
-
+    // Method to get the display string for a specific binding
     public string GetBindingText(Binding binding) {
+        // Returns the binding's display string based on the specific binding type
         switch (binding) {
             default:
             case Binding.Move_Up:
@@ -106,7 +128,9 @@ public class GameInput : MonoBehaviour {
         }
     }
 
+    // Method to rebind a specific input action
     public void RebindBinding(Binding binding, Action onActionRebound) {
+        // Disables input, starts rebind process, and saves the new binding
         playerInputActions.Player.Disable();
 
         InputAction inputAction;

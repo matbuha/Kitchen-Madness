@@ -1,3 +1,14 @@
+/*
+This script manages the options UI in a Unity game.
+It sets up listeners for various buttons to handle their respective actions,
+such as changing sound effects and music volumes, rebinding keys, and closing the options menu.
+The script interacts with KitchenGameManager to respond to game unpause events and GameInput for key rebinding.
+The Show and Hide methods control the visibility of the options UI,
+and additional methods ShowPressToRebindKey and HidePressToRebindKey manage the visibility of the UI element for rebinding keys.
+The UpdateVisual method updates the UI elements to reflect the current settings.
+*/
+
+// Import necessary namespaces for Unity functionality, UI handling, and text handling
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,12 +17,13 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 
+// Declare a public class 'OptionsUI' that inherits from 'MonoBehaviour'
 public class OptionsUI : MonoBehaviour {
 
-
+    // Public static property to access the instance of this class
     public static OptionsUI Instance { get; private set; }
 
-
+    // Serialized private fields for UI components
     [SerializeField] private Button soundEffectsButton;
     [SerializeField] private Button musicButton;
     [SerializeField] private Button closeButton;
@@ -40,13 +52,15 @@ public class OptionsUI : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI gamepadPauseText;
     [SerializeField] private Transform pressToRebindKeyTransform;
 
-
+    // Private field to store an action to be called when the close button is pressed
     private Action onCloseButtonAction;
 
 
-
+    // Define the Awake method which is called when the script instance is being loaded
     private void Awake() {
-        Instance = this;
+        Instance = this; // Assign this instance to the static property Instance
+
+        // Add listeners to the buttons to handle click events
         soundEffectsButton.onClick.AddListener (() => {
             SoundManager.Instance.ChangeVolume();
             UpdateVisual();
@@ -71,9 +85,12 @@ public class OptionsUI : MonoBehaviour {
         gamepadPauseButton.onClick.AddListener (() => { RebindBinding(GameInput.Binding.Gamepad_Pause); });
     }
 
+    // Define the Start method which is called just before any of the Update methods is called the first time
     private void Start() {
+        // Subscribe to the OnGameUnpaused event of the KitchenGameManager
         KitchenGameManager.Instance.OnGameUnpaused += KitchenGameManager_OnGameUnpaused;
 
+        // Initialize the UI
         UpdateVisual();
 
         HidePressToRebindKey();
@@ -81,14 +98,16 @@ public class OptionsUI : MonoBehaviour {
         Hide();
     }
 
+    // Define the event handler method for when the game is unpaused
     private void KitchenGameManager_OnGameUnpaused(object sender, EventArgs e) {
-        Hide();
+        Hide(); // Hide the options UI
     }
 
+    // Method to update the visual representation of the UI elements
     private void UpdateVisual() {
+        // Update the text and other UI elements to reflect the current settings
         soundEffectsText.text = "Sound Effect: " + Mathf.Round(SoundManager.Instance.GetVolume() * 10f);
         musicText.text = "Music: " + Mathf.Round(MusicManager.Instance.GetVolume() * 10f);
-
         moveUpText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Up);
         moveDownText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Down);
         moveLeftText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Left);
@@ -101,34 +120,35 @@ public class OptionsUI : MonoBehaviour {
         gamepadPauseText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Gamepad_Pause);
     }
 
+    // Public method to show the options UI
     public void Show(Action onCloseButtonAction) {
-        this.onCloseButtonAction = onCloseButtonAction;
-
-        gameObject.SetActive(true);
-
-        soundEffectsButton.Select();
+        this.onCloseButtonAction = onCloseButtonAction; // Store the provided action
+        gameObject.SetActive(true); // Activate the gameObject
+        soundEffectsButton.Select(); // Select the sound effects button by default
     }
 
-        public void Hide() {
-        gameObject.SetActive(false);
+    // Public method to hide the options UI
+    public void Hide() {
+        gameObject.SetActive(false); // Deactivate the gameObject
     }
 
-
+    // Method to show the press-to-rebind key UI element
     private void ShowPressToRebindKey() {
         pressToRebindKeyTransform.gameObject.SetActive(true);
     }
 
+    // Method to hide the press-to-rebind key UI element
     private void HidePressToRebindKey() {
         pressToRebindKeyTransform.gameObject.SetActive(false);
     }
 
+    // Method to handle rebinding of key bindings
     private void RebindBinding(GameInput.Binding binding) {
-        ShowPressToRebindKey();
+        ShowPressToRebindKey(); // Show the rebind UI
+        // Call the RebindBinding method of GameInput and provide a callback for when the rebinding is complete
         GameInput.Instance.RebindBinding(binding, () => {
             HidePressToRebindKey();
             UpdateVisual();
         });
-
     }
-
 }
