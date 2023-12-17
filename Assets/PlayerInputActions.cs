@@ -62,15 +62,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""682836f9-202d-4972-868c-85cc41ffc55f"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -189,7 +180,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""id"": ""4a53d66a-6cc9-4ca7-a0b5-5a0cacd76ade"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
-                    ""processors"": ""StickDeadzone"",
+                    ""processors"": ""StickDeadzone(min=0.1)"",
                     ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
@@ -210,28 +201,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""01b9b51c-138c-447b-acf5-158f79f65ef5"",
                     ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Interact"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""627c77f2-d96b-46af-bb3f-c1c12ba894fe"",
-                    ""path"": ""<Keyboard>/1"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Interact"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""953c1a8c-f2e7-4e89-84ec-1ee0be6ec939"",
-                    ""path"": ""<Touchscreen>/Press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -263,28 +232,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""19b07b66-5d0a-4ddb-8301-f3032fd17cfd"",
-                    ""path"": ""<Keyboard>/2"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""InteractAlternate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d42e3f88-3ab4-40e2-b78c-374d42c2c119"",
-                    ""path"": ""<Touchscreen>/Press"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""InteractAlternate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""49ab7f5e-7f00-4f4c-ba2a-874389d3013a"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
@@ -304,17 +251,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3fe60a6c-c499-40e8-ab2b-11cbd2034433"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -327,7 +263,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_InteractAlternate = m_Player.FindAction("InteractAlternate", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
-        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -393,7 +328,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_InteractAlternate;
     private readonly InputAction m_Player_Pause;
-    private readonly InputAction m_Player_Jump;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -402,7 +336,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @InteractAlternate => m_Wrapper.m_Player_InteractAlternate;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
-        public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -424,9 +357,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
-            @Jump.started += instance.OnJump;
-            @Jump.performed += instance.OnJump;
-            @Jump.canceled += instance.OnJump;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -443,9 +373,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
-            @Jump.started -= instance.OnJump;
-            @Jump.performed -= instance.OnJump;
-            @Jump.canceled -= instance.OnJump;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -469,6 +396,5 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnInteractAlternate(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
     }
 }
