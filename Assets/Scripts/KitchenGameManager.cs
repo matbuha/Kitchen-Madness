@@ -19,10 +19,12 @@ public class KitchenGameManager : MonoBehaviour {
     // Singleton instance of KitchenGameManager
     public static KitchenGameManager Instance { get; private set; }
 
+
     // Events for state change and pause/unpause actions
     public event EventHandler OnStateChanged;
     public event EventHandler OnGamePaused;
     public event EventHandler OnGameUnpaused;
+    public event EventHandler OnRecipeSuccess;
 
     // Enum to define different game states
     private enum State {
@@ -40,8 +42,8 @@ public class KitchenGameManager : MonoBehaviour {
     private float gamePlayingTimer;            // Timer for game playing duration
     [SerializeField] private float gamePlayingTimerMax = 180f;  // Maximum duration for the game playing timer
     private bool isGamePaused = false;         // Flag to check if the game is paused
-    private int successfulDeliveries = 0;
-    [SerializeField] private int successfulDeliveriesGoal = 3;
+    public int successfulDeliveries = 0;
+    [SerializeField] public int successfulDeliveriesGoal = 3;
 
     // Define the Awake method which is called when the script instance is being loaded
     private void Awake() {
@@ -57,6 +59,7 @@ public class KitchenGameManager : MonoBehaviour {
         GameInput.Instance.OnPauseAction += GameInput_OnPauseAction;
         DeliveryManager.Instance.OnRecipeSuccess += (sender, e) => {
             successfulDeliveries++;
+            OnRecipeSuccess?.Invoke(this, EventArgs.Empty); // Invoke the event
             CheckForLevelCompletion();
         };
     }
@@ -108,18 +111,6 @@ public class KitchenGameManager : MonoBehaviour {
             }
         }
     }
-
-    /*private void LoadNextLevel() {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int nextSceneIndex = currentSceneIndex + 1;
-
-        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings) {
-            SceneManager.LoadScene(nextSceneIndex);
-        } else {
-            // Handle last level completion here
-            // For example, load main menu or show completion message
-        }
-    }*/
 
     // Method to check if the game is currently playing
     public bool IsGamePlaying() {
