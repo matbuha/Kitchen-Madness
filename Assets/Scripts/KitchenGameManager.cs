@@ -38,20 +38,27 @@ public class KitchenGameManager : MonoBehaviour {
     private float waitingToStartTimer = 1f;    // Timer for waiting to start
     private float countdownToStartTimer = 3f;  // Timer for countdown to start
     private float gamePlayingTimer;            // Timer for game playing duration
-    private float gamePlayingTimerMax = 180f;  // Maximum duration for the game playing timer
+    [SerializeField] private float gamePlayingTimerMax = 180f;  // Maximum duration for the game playing timer
     private bool isGamePaused = false;         // Flag to check if the game is paused
-    private bool isGamesuccess = false;        // Flag to check if the game is successfully completed
+    private int successfulDeliveries = 0;
+    [SerializeField] private int successfulDeliveriesGoal = 3;
 
     // Define the Awake method which is called when the script instance is being loaded
     private void Awake() {
-        Instance = this; // Assign this instance to the singleton instance
-        state = State.WaitingToStart; // Set initial game state
+        if (Instance != null) {
+            Debug.LogError("There is more than one KitchenGameManager instance");
+        }
+        Instance = this;
+        state = State.WaitingToStart;
     }
 
     // Define the Start method which is called just before any of the Update methods is called the first time
     private void Start() {
-        // Subscribe to the OnPauseAction event of the GameInput
         GameInput.Instance.OnPauseAction += GameInput_OnPauseAction;
+        DeliveryManager.Instance.OnRecipeSuccess += (sender, e) => {
+            successfulDeliveries++;
+            CheckForLevelCompletion();
+        };
     }
 
     // Event handler method for pause action
@@ -80,18 +87,39 @@ public class KitchenGameManager : MonoBehaviour {
                 }
                 break;
             case State.GamePlaying:
-                // Update logic for game playing state
                 gamePlayingTimer -= Time.deltaTime;
                 if (gamePlayingTimer < 0f) {
-                    state = State.GameOver;
-                    OnStateChanged?.Invoke(this, EventArgs.Empty); // Invoke state change event
+                    CheckForLevelCompletion();
                 }
                 break;
             case State.GameOver:
-                // Logic for game over state
+                // Game over logic here if needed
                 break;
         }
     }
+
+    private void CheckForLevelCompletion() {
+        if (gamePlayingTimer < 0f) {
+            if(successfulDeliveries >= successfulDeliveriesGoal) {
+                Loader.LoadNextLevel(); // Load the next level
+            } else {
+                state = State.GameOver;
+                OnStateChanged?.Invoke(this, EventArgs.Empty);
+            }
+        }
+    }
+
+    /*private void LoadNextLevel() {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings) {
+            SceneManager.LoadScene(nextSceneIndex);
+        } else {
+            // Handle last level completion here
+            // For example, load main menu or show completion message
+        }
+    }*/
 
     // Method to check if the game is currently playing
     public bool IsGamePlaying() {
