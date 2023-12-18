@@ -1,36 +1,50 @@
+name: Test project
+
 on: [push]
 
 jobs:
-  build:
-    name: Build Unity Project
+  testAllModes:
+    name: Test in ${{ matrix.testMode }}
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        targetPlatform:
-          - StandaloneWindows64 # For Windows Build
-          - Android # For Android Build
+        projectPath:
+          - .
+        testMode:
+          - playmode
+          - editmode
+          - standalone
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4.1.1
-
-      # File integrity check
-      - name: Verify File Integrity
-        run: sha256sum -c Assets/Scenes/GameScene/checksums.txt || exit 1
-
-      - name: Unity - Builder
-        uses: game-ci/unity-builder@v4.1.3
+      - uses: actions/checkout@v4
         with:
-          unityVersion: '2022.3.13f1' # Specify your Unity version
-          targetPlatform: ${{ matrix.targetPlatform }}
-          buildName: MyGame
+          lfs: true
+      - uses: actions/cache@v3
+        with:
+          path: ${{ matrix.projectPath }}/Library
+          key: Library-${{ matrix.projectPath }}
+          restore-keys: |
+            Library-
+      - uses: game-ci/unity-test-runner@v4
+        id: tests
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          name: Build
-          path: build/${{ matrix.targetPlatform }}/*
-
-      - name: Clean up
-        run: rm -rf build
+          projectPath: ${{ matrix.projectPath }}
+          testMode: ${{ matrix.testMode }}
+          artifactsPath: ${{ matrix.testMode }}-artifacts
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          checkName: ${{ matrix.testMode }} Test Results
+          coverageOptions: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*'
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: Test results for ${{ matrix.testMode }}
+          path: ${{ steps.tests.outputs.artifactsPath }}
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: Coverage results for ${{ matrix.testMode }}
+          path: ${{ steps.tests.outputs.coveragePath }}
