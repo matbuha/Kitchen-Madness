@@ -18,7 +18,7 @@ public class CuttingCounter : BaseCounter, IHasProgress {
     public static event EventHandler OnAnyCut;
 
     // Declare a new public static method 'ResetStaticData' that hides the inherited method
-    new public static void RestStaticData() {
+    public static void RestStaticData() {
         OnAnyCut = null;
     }
 
