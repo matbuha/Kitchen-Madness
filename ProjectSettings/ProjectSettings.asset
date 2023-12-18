@@ -80,7 +80,7 @@ PlayerSettings:
   androidFullscreenMode: 1
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 0
+  runInBackground: 1
   captureSingleScreen: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
@@ -139,10 +139,7 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.1.0
-  preloadedAssets:
-  - {fileID: 7730905106944960252, guid: 85d4c4c20e8f4eb49a953b5418aeaa6b, type: 2}
-  - {fileID: 11400000, guid: 1edbfb3cd6de52d4588ff0324c4cd24e, type: 2}
-  - {fileID: 11400000, guid: 8308dcc43eb900840a7982ed63a26960, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1

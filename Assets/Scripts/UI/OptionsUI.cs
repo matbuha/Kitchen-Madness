@@ -37,7 +37,6 @@ public class OptionsUI : MonoBehaviour {
     [SerializeField] private Button gamepadInteractButton;
     [SerializeField] private Button gamepadInteractAlternateButton;
     [SerializeField] private Button gamepadPauseButton;
-    [SerializeField] private Button optionsAndroidButton;
     [SerializeField] private TextMeshProUGUI soundEffectsText;
     [SerializeField] private TextMeshProUGUI musicText;
     [SerializeField] private TextMeshProUGUI moveUpText;
