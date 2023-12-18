@@ -78,7 +78,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7929681066346863161, guid: e80bb53e6947820468d17ef6538eea0f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8891677200411728184}
+      addedObject: {fileID: 8501491323693266095}
   m_SourcePrefab: {fileID: 100100000, guid: e80bb53e6947820468d17ef6538eea0f, type: 3}
 --- !u!4 &779546351099620887 stripped
 Transform:
@@ -92,7 +92,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7054261683798233079}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8891677200411728184
+--- !u!114 &8501491323693266095
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af8cb716be047246a3ffcf5ca92b7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 8891677200411728184}
+  baseCounter: {fileID: 0}
   visualGameObjectArray:
   - {fileID: 6741879291632223245}
 --- !u!1 &6741879291632223245 stripped
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33685bfd4282c7e4e93c5643a7f0d328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platesCounter: {fileID: 8891677200411728184}
+  platesCounter: {fileID: 0}
   counterTopPoint: {fileID: 779546351099620887}
   plateVisualPrefab: {fileID: 3812876574508226176, guid: c0c9afd619b40914a8f625c0535e2284,
     type: 3}

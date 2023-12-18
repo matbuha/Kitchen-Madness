@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cba4e2cb12925469730e17fc3dabe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoveCounter: {fileID: 6933417643295191638}
+  stoveCounter: {fileID: 0}
 --- !u!1 &3073283304095250412
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2559a0e6a24654580955709f851286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoveCounter: {fileID: 6933417643295191638}
+  stoveCounter: {fileID: 0}
 --- !u!95 &7105716406970428361
 Animator:
   serializedVersion: 5
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af8cb716be047246a3ffcf5ca92b7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 6933417643295191638}
+  baseCounter: {fileID: 0}
   visualGameObjectArray:
   - {fileID: 6743266099014028829}
   - {fileID: 2600142047169379811}
@@ -627,7 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334a9b8ff4b52f74dbab507232171d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoveCounter: {fileID: 6933417643295191638}
+  stoveCounter: {fileID: 0}
   stoveOnGameObject: {fileID: 2153452441724253963}
   particlesGameObject: {fileID: 6173850364003033218}
 --- !u!4 &2480956492154215111 stripped
@@ -817,7 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba04b57a33875c440b4c446309241b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoveCounter: {fileID: 6933417643295191638}
+  stoveCounter: {fileID: 0}
 --- !u!224 &4497964262989128520 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9207734711382090828, guid: 2f7e1f37ea4b53748af5b79b32d070e4,
@@ -929,7 +929,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7929681066346863161, guid: e80bb53e6947820468d17ef6538eea0f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6933417643295191638}
+      addedObject: {fileID: 8938387032063930274}
   m_SourcePrefab: {fileID: 100100000, guid: e80bb53e6947820468d17ef6538eea0f, type: 3}
 --- !u!4 &1198145102380649261 stripped
 Transform:
@@ -943,7 +943,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8905004569235958477}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6933417643295191638
+--- !u!114 &8938387032063930274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

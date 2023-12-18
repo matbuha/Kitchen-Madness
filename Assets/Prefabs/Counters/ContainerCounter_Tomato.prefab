@@ -8,10 +8,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2823956442079368426, guid: 3f070da40c8f26745a90e34f89fbab1b,
+        type: 3}
+      propertyPath: baseCounter
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4759046404866791780, guid: 3f070da40c8f26745a90e34f89fbab1b,
         type: 3}
       propertyPath: m_Name
       value: ContainerCounter_Tomato
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725140481143870270, guid: 3f070da40c8f26745a90e34f89fbab1b,
+        type: 3}
+      propertyPath: containerCounter
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7923309780246670730, guid: 3f070da40c8f26745a90e34f89fbab1b,
         type: 3}
@@ -69,8 +79,39 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 91e8fe3de9249fc44b7bdd8050062896,
         type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3931554909886087858, guid: 3f070da40c8f26745a90e34f89fbab1b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4759046404866791780, guid: 3f070da40c8f26745a90e34f89fbab1b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3528360042386359770}
   m_SourcePrefab: {fileID: 100100000, guid: 3f070da40c8f26745a90e34f89fbab1b, type: 3}
+--- !u!4 &3111450856346201225 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5130762647957824189, guid: 3f070da40c8f26745a90e34f89fbab1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7789601591426272820}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3319643435491170128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4759046404866791780, guid: 3f070da40c8f26745a90e34f89fbab1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7789601591426272820}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3528360042386359770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3319643435491170128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9754a6a4c1abd874f9e63a8d0c36ea22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterTopPoint: {fileID: 3111450856346201225}
+  kitchenObjectSO: {fileID: 11400000, guid: bd1dd2ffa48177642ba8b3ad588e2107, type: 2}

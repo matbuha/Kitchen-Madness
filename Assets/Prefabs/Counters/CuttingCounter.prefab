@@ -82,7 +82,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7929681066346863161, guid: e80bb53e6947820468d17ef6538eea0f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7639585962065517045}
+      addedObject: {fileID: 8491900518758982915}
   m_SourcePrefab: {fileID: 100100000, guid: e80bb53e6947820468d17ef6538eea0f, type: 3}
 --- !u!4 &6148975691219730460 stripped
 Transform:
@@ -96,7 +96,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1486373818065792715}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7639585962065517045
+--- !u!114 &8491900518758982915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,11 +132,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1a0afd856a35421469b28b916116fd9c, type: 2}
-    - target: {fileID: 2732144339381337267, guid: d72bee846803d074784ffb8f64e993ca,
-        type: 3}
-      propertyPath: cuttingCounter
-      value: 
-      objectReference: {fileID: 7639585962065517045}
     - target: {fileID: 4171094756720850327, guid: d72bee846803d074784ffb8f64e993ca,
         type: 3}
       propertyPath: m_IsActive
@@ -270,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af8cb716be047246a3ffcf5ca92b7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 7639585962065517045}
+  baseCounter: {fileID: 0}
   visualGameObjectArray:
   - {fileID: 7866672170746960338}
   - {fileID: 6179848701431790907}
@@ -306,11 +301,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProgressBarUI
       objectReference: {fileID: 0}
-    - target: {fileID: 5906173858592175072, guid: 2f7e1f37ea4b53748af5b79b32d070e4,
-        type: 3}
-      propertyPath: cuttingCounter
-      value: 
-      objectReference: {fileID: 7639585962065517045}
     - target: {fileID: 5906173858592175072, guid: 2f7e1f37ea4b53748af5b79b32d070e4,
         type: 3}
       propertyPath: hasProgressGameObject
@@ -435,11 +425,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6148975691219730460}
     m_Modifications:
-    - target: {fileID: 2732144339381337267, guid: d72bee846803d074784ffb8f64e993ca,
-        type: 3}
-      propertyPath: cuttingCounter
-      value: 
-      objectReference: {fileID: 7639585962065517045}
     - target: {fileID: 4589716710238282922, guid: d72bee846803d074784ffb8f64e993ca,
         type: 3}
       propertyPath: m_Name
@@ -529,4 +514,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5552524ae4c1644386594d022c0fd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cuttingCounter: {fileID: 7639585962065517045}
+  cuttingCounter: {fileID: 0}

@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af8cb716be047246a3ffcf5ca92b7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 5522931774117617330}
+  baseCounter: {fileID: 0}
   visualGameObjectArray:
   - {fileID: 1371928331579256918}
 --- !u!1001 &5921819646574522806
@@ -854,7 +854,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7929681066346863161, guid: e80bb53e6947820468d17ef6538eea0f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5522931774117617330}
+      addedObject: {fileID: 281209997994901510}
   m_SourcePrefab: {fileID: 100100000, guid: e80bb53e6947820468d17ef6538eea0f, type: 3}
 --- !u!4 &1430915723066761057 stripped
 Transform:
@@ -874,7 +874,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5921819646574522806}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5522931774117617330
+--- !u!114 &281209997994901510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
