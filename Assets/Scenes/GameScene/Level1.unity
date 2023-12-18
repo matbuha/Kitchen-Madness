@@ -3062,7 +3062,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cuttingCounter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 543391714}
     - target: {fileID: 6148975691219730460, guid: 843a2500121a24146b38ca3f1ef2f6fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3139,6 +3139,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 543391712}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &543391714 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8491900518758982915, guid: 843a2500121a24146b38ca3f1ef2f6fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 543391712}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379211d71d4b56c4781f7df12e151a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &544243197
 GameObject:
   m_ObjectHideFlags: 0
@@ -3849,6 +3861,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1602880684}
     m_Modifications:
+    - target: {fileID: 165999975748528283, guid: 18ba79e161247474bb470f8a649d981e,
+        type: 3}
+      propertyPath: containerCounter
+      value: 
+      objectReference: {fileID: 1303406506}
     - target: {fileID: 2094799201072816833, guid: 18ba79e161247474bb470f8a649d981e,
         type: 3}
       propertyPath: m_Name
@@ -3939,6 +3956,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -89.999
       objectReference: {fileID: 0}
+    - target: {fileID: 8658463680876900175, guid: 18ba79e161247474bb470f8a649d981e,
+        type: 3}
+      propertyPath: baseCounter
+      value: 
+      objectReference: {fileID: 1303406506}
     m_RemovedComponents:
     - {fileID: 7608286109238098199, guid: 18ba79e161247474bb470f8a649d981e, type: 3}
     m_RemovedGameObjects: []
@@ -5680,11 +5702,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6.5
-  gameInput: {fileID: 0}
+  gameInput: {fileID: 1870435053}
   countersLayerMask:
     serializedVersion: 2
-    m_Bits: 0
-  kitchenObjectHoldPoint: {fileID: 0}
+    m_Bits: 64
+  kitchenObjectHoldPoint: {fileID: 391091109}
 --- !u!1 &962422380
 GameObject:
   m_ObjectHideFlags: 0
@@ -10762,7 +10784,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cuttingCounter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1645775113}
     - target: {fileID: 6148975691219730460, guid: 843a2500121a24146b38ca3f1ef2f6fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10833,6 +10855,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 843a2500121a24146b38ca3f1ef2f6fe, type: 3}
+--- !u!114 &1645775113 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8491900518758982915, guid: 843a2500121a24146b38ca3f1ef2f6fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1645775112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379211d71d4b56c4781f7df12e151a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1645996120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14429,7 +14463,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cuttingCounter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2081891036}
     - target: {fileID: 6148975691219730460, guid: 843a2500121a24146b38ca3f1ef2f6fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14506,6 +14540,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2081891034}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2081891036 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8491900518758982915, guid: 843a2500121a24146b38ca3f1ef2f6fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2081891034}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379211d71d4b56c4781f7df12e151a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2084949541
 GameObject:
   m_ObjectHideFlags: 0

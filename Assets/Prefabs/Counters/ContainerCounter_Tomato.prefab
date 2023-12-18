@@ -12,7 +12,7 @@ PrefabInstance:
         type: 3}
       propertyPath: baseCounter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3528360042386359770}
     - target: {fileID: 4759046404866791780, guid: 3f070da40c8f26745a90e34f89fbab1b,
         type: 3}
       propertyPath: m_Name
@@ -22,7 +22,7 @@ PrefabInstance:
         type: 3}
       propertyPath: containerCounter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3528360042386359770}
     - target: {fileID: 7923309780246670730, guid: 3f070da40c8f26745a90e34f89fbab1b,
         type: 3}
       propertyPath: m_LocalPosition.x

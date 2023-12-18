@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af8cb716be047246a3ffcf5ca92b7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 0}
+  baseCounter: {fileID: 5682007481818339097}
   visualGameObjectArray:
   - {fileID: 9163525120180351320}
 --- !u!1 &9163525120180351320 stripped

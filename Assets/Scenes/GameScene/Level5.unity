@@ -775,7 +775,6 @@ MonoBehaviour:
   gamepadInteractButton: {fileID: 22880092}
   gamepadInteractAlternateButton: {fileID: 205955417}
   gamepadPauseButton: {fileID: 1705064588}
-  optionsAndroidButton: {fileID: 0}
   soundEffectsText: {fileID: 1973296805}
   musicText: {fileID: 800820102}
   moveUpText: {fileID: 1076868931}
@@ -4411,18 +4410,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 235221827}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &438076004 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7639585962065517045, guid: 843a2500121a24146b38ca3f1ef2f6fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 1645775112}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379211d71d4b56c4781f7df12e151a84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &438076006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6148975691219730460, guid: 843a2500121a24146b38ca3f1ef2f6fe,
@@ -4802,7 +4789,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &543391714 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7639585962065517045, guid: 843a2500121a24146b38ca3f1ef2f6fe,
+  m_CorrespondingSourceObject: {fileID: 8491900518758982915, guid: 843a2500121a24146b38ca3f1ef2f6fe,
     type: 3}
   m_PrefabInstance: {fileID: 543391712}
   m_PrefabAsset: {fileID: 0}
@@ -10984,11 +10971,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8938387032063930274, guid: f3ea0dfb7e596d843a482d39562eedc6,
+        type: 3}
+      propertyPath: counterTopPoint
+      value: 
+      objectReference: {fileID: 1624954976}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3ea0dfb7e596d843a482d39562eedc6, type: 3}
+--- !u!4 &1624954976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1198145102380649261, guid: f3ea0dfb7e596d843a482d39562eedc6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1624954975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1635834824
 GameObject:
   m_ObjectHideFlags: 0
@@ -11034,7 +11032,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cuttingCounter
       value: 
-      objectReference: {fileID: 438076004}
+      objectReference: {fileID: 1645775113}
     - target: {fileID: 6148975691219730460, guid: 843a2500121a24146b38ca3f1ef2f6fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11105,6 +11103,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 843a2500121a24146b38ca3f1ef2f6fe, type: 3}
+--- !u!114 &1645775113 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8491900518758982915, guid: 843a2500121a24146b38ca3f1ef2f6fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1645775112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379211d71d4b56c4781f7df12e151a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1645996120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14366,7 +14376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &2081891036 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7639585962065517045, guid: 843a2500121a24146b38ca3f1ef2f6fe,
+  m_CorrespondingSourceObject: {fileID: 8491900518758982915, guid: 843a2500121a24146b38ca3f1ef2f6fe,
     type: 3}
   m_PrefabInstance: {fileID: 2081891034}
   m_PrefabAsset: {fileID: 0}

@@ -4122,18 +4122,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436898385}
   m_CullTransparentMesh: 1
---- !u!114 &438076004 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7639585962065517045, guid: 843a2500121a24146b38ca3f1ef2f6fe,
-    type: 3}
-  m_PrefabInstance: {fileID: 1645775112}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379211d71d4b56c4781f7df12e151a84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &438076006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6148975691219730460, guid: 843a2500121a24146b38ca3f1ef2f6fe,
@@ -4450,7 +4438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &543391714 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7639585962065517045, guid: 843a2500121a24146b38ca3f1ef2f6fe,
+  m_CorrespondingSourceObject: {fileID: 8491900518758982915, guid: 843a2500121a24146b38ca3f1ef2f6fe,
     type: 3}
   m_PrefabInstance: {fileID: 543391712}
   m_PrefabAsset: {fileID: 0}
@@ -4650,7 +4638,6 @@ MonoBehaviour:
   gamepadInteractButton: {fileID: 1572935718}
   gamepadInteractAlternateButton: {fileID: 1687344444}
   gamepadPauseButton: {fileID: 1435746090}
-  optionsAndroidButton: {fileID: 0}
   soundEffectsText: {fileID: 133261082}
   musicText: {fileID: 644300741}
   moveUpText: {fileID: 778063179}
@@ -10207,7 +10194,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cuttingCounter
       value: 
-      objectReference: {fileID: 438076004}
+      objectReference: {fileID: 1645775113}
     - target: {fileID: 6148975691219730460, guid: 843a2500121a24146b38ca3f1ef2f6fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10278,6 +10265,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 843a2500121a24146b38ca3f1ef2f6fe, type: 3}
+--- !u!114 &1645775113 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8491900518758982915, guid: 843a2500121a24146b38ca3f1ef2f6fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1645775112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379211d71d4b56c4781f7df12e151a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1645996120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14338,7 +14337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &2081891036 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7639585962065517045, guid: 843a2500121a24146b38ca3f1ef2f6fe,
+  m_CorrespondingSourceObject: {fileID: 8491900518758982915, guid: 843a2500121a24146b38ca3f1ef2f6fe,
     type: 3}
   m_PrefabInstance: {fileID: 2081891034}
   m_PrefabAsset: {fileID: 0}

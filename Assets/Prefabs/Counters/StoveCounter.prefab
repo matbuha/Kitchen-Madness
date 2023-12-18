@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2559a0e6a24654580955709f851286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoveCounter: {fileID: 0}
+  stoveCounter: {fileID: 8938387032063930274}
 --- !u!95 &7105716406970428361
 Animator:
   serializedVersion: 5
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af8cb716be047246a3ffcf5ca92b7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 0}
+  baseCounter: {fileID: 8938387032063930274}
   visualGameObjectArray:
   - {fileID: 6743266099014028829}
   - {fileID: 2600142047169379811}
@@ -627,7 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334a9b8ff4b52f74dbab507232171d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoveCounter: {fileID: 0}
+  stoveCounter: {fileID: 8938387032063930274}
   stoveOnGameObject: {fileID: 2153452441724253963}
   particlesGameObject: {fileID: 6173850364003033218}
 --- !u!4 &2480956492154215111 stripped
@@ -817,7 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba04b57a33875c440b4c446309241b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoveCounter: {fileID: 0}
+  stoveCounter: {fileID: 8938387032063930274}
 --- !u!224 &4497964262989128520 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9207734711382090828, guid: 2f7e1f37ea4b53748af5b79b32d070e4,
