@@ -10,15 +10,15 @@ jobs:
           - StandaloneWindows64 # For Windows Build
           - Android # For Android Build
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
 
       # File integrity check
       - name: Verify File Integrity
         run: sha256sum -c Assets/Scenes/GameScene/checksums.txt || exit 1
 
-      - name: Build Unity Project
-        uses: game-ci/unity-builder@v2
+      - name: Unity - Builder
+        uses: game-ci/unity-builder@v4.1.3
         with:
           unityVersion: '2022.3.13f1' # Specify your Unity version
           targetPlatform: ${{ matrix.targetPlatform }}
