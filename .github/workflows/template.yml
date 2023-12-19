@@ -78,7 +78,7 @@ jobs:
           path: build/WebGL
           
   deployPages:
-    needs: buildWebGL
+    needs: buildAndDeploy
     name: Deploy to Itch.io 🚀
     runs-on: ubuntu-latest
     steps:
