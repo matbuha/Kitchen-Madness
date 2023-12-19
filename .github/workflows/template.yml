@@ -4,6 +4,7 @@ on: push
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  GIT_PRIVATE_TOKEN: ${{ secrets.GIT_PRIVATE_TOKEN }}
 
 jobs:         
  buildWebGL:
