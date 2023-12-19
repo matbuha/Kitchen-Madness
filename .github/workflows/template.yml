@@ -8,7 +8,19 @@ env:
   UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
 
 jobs:
-  requestActivation:
+  # requestActivation:
+  #   name: Request activation ✔
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     # Checkout repository (required to test local actions)
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v1
+
+  #     # Activate Unity
+  #     - name: Activate Unity
+  #       uses: ./
+
+  buildAndDeploy:
     name: Request activation ✔
     runs-on: ubuntu-latest
     steps:
@@ -16,11 +28,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v1
 
-      # Activate Unity
-      - name: Activate Unity
-        uses: ./
-
-  buildWebGL:
     name: Build for WebGL 🖥️
     runs-on: ubuntu-latest
     strategy:
