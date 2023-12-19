@@ -1,4 +1,4 @@
-name: GameCI Template 🎮
+name: Build project 🎮
 
 on: push
 
@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checkout repository
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # Request manual activation file
-      - uses: game-ci/unity-request-activation-file@v3
+      - uses: game-ci/unity-request-activation-file@v2
         id: getManualLicenseFile
 
       # Upload artifact (Unity_v20XX.X.XXXX.alf)
@@ -33,7 +33,7 @@ jobs:
       fail-fast: false
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Create LFS file list
         run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
@@ -65,6 +65,15 @@ jobs:
       #   with:
       #     name: Manual Activation File
       #     path: ./activation
+
+      - name: Create .upmconfig.toml UPM authentication file
+          run: |
+            mkdir /home/runner/work/_temp/_github_home
+            cd /home/runner/work/_temp/_github_home
+            echo "[npmAuth.\"https://upm.example.com\"]" >> .upmconfig.toml
+            echo "alwaysAuth = true" >> .upmconfig.toml
+            echo "token = \"${{ secrets.NPM_TOKEN }}\"" >> .upmconfig.toml
+
               
 
       - uses: game-ci/unity-builder@v4
@@ -83,7 +92,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - uses: actions/download-artifact@v2
         with:
