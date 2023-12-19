@@ -60,18 +60,17 @@ jobs:
             Library-build-
             Library-
 
-      - name: Download Activation File
-        uses: actions/download-artifact@v2
-        with:
-          name: Manual Activation File
-          path: ./activation
+      # - name: Download Activation File
+      #   uses: actions/download-artifact@v2
+      #   with:
+      #     name: Manual Activation File
+      #     path: ./activation
               
 
-      - uses: game-ci/unity-builder@v2.1.2
+      - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: WebGL
           customImage: unityci/editor:ubuntu-2022.3.15f1-webgl-3.0.0
-          #  GIT_PRIVATE_TOKEN: ${{ secrets.GIT_PRIVATE_TOKEN }}
 
       - uses: actions/upload-artifact@v3
         with:
