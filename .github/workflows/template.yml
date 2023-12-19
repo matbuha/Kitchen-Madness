@@ -21,13 +21,6 @@ jobs:
   #       uses: ./
 
   buildAndDeploy:
-    name: Request activation ✔
-    runs-on: ubuntu-latest
-    steps:
-      # Checkout repository (required to test local actions)
-      - name: Checkout repository
-        uses: actions/checkout@v1
-
     name: Build for WebGL 🖥️
     runs-on: ubuntu-latest
     strategy:
@@ -35,6 +28,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      # Checkout repository (required to test local actions)
+      - name: Checkout repository
+        uses: actions/checkout@v1
+
+      # Activate Unity
+      - name: Activate Unity
+        uses: ./
 
       - name: Create LFS file list
         run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
