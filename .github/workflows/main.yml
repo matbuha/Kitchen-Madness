@@ -61,7 +61,7 @@ jobs:
       # Output
       - uses: actions/upload-artifact@v4
         with:
-          name: Build
+          name: kitchen-madness
           path: build
 
   deployPages:
@@ -74,7 +74,7 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          name: Build
+          name: kitchen-madness
           path: build
 
       - name: Display structure of root files
@@ -84,7 +84,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          branch: itch-io
+          branch: main
           folder: build
           
       - uses: manleydev/butler-publish-itchio-action@master
@@ -93,5 +93,5 @@ jobs:
           CHANNEL: HTML
           ITCH_GAME: Kitchen-Madness
           ITCH_USER: Erzelman
-          BRANCH: itch-io
+          BRANCH: main
           PACKAGE: build
