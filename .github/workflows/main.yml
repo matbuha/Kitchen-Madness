@@ -39,7 +39,7 @@ jobs:
       - name: Commit changes
         run: |
           git add .
-          git commit -m "Committing changes from GitHub Actions"
+          git diff --staged --quiet || git commit -m "Committing changes from GitHub Actions"
           git push
 
       - name: Clean up Docker space
