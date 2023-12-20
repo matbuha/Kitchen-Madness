@@ -7,8 +7,7 @@ The icons are set to be visible and their sprites are updated to reflect the cor
 */
 
 // Import necessary namespaces for Unity functionality, UI handling, and text handling
-using System.Collections;
-using System.Collections.Generic;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

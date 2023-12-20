@@ -8,8 +8,7 @@ and the resumeButton is set to be selected by default when the menu is shown.
 */
 
 // Import necessary namespaces for Unity functionality and UI handling
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 

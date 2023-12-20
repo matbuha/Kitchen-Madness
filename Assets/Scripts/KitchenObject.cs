@@ -8,8 +8,7 @@ using a KitchenObjectSO (a scriptable object representing kitchen items) and set
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'KitchenObject' that inherits from 'MonoBehaviour'

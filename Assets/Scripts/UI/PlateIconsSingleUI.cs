@@ -5,8 +5,7 @@ This allows for dynamic updating of UI icons based on the specific kitchen items
 */
 
 // Import necessary namespaces for Unity functionality and UI handling
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 

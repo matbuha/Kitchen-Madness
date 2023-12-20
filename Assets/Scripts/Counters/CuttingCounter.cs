@@ -6,9 +6,8 @@ The script listens to an event (OnCut) from the cuttingCounter and responds by t
 */
 
 // Import necessary namespaces for Unity functionality
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // Declare a public class 'CuttingCounter' that inherits from 'BaseCounter' and implements the 'IHasProgress' interface

@@ -8,8 +8,7 @@ such as the completion of a loading process.
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'LoaderCallback' that inherits from 'MonoBehaviour'

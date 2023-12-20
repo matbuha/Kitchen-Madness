@@ -7,9 +7,8 @@ This event can be used to trigger other game mechanics or visual effects in resp
  
 
 // Import necessary namespaces for Unity functionality and system functions
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // Declare a public class 'ContainerCounter' that inherits from 'BaseCounter'

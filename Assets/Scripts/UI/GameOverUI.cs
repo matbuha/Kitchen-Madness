@@ -7,8 +7,7 @@ The Show and Hide methods control the visibility of the game over UI.
 */
 
 // Import necessary namespaces for Unity functionality and text handling
-using System.Collections;
-using System.Collections.Generic;
+
 using TMPro;
 using UnityEngine;
 

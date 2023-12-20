@@ -9,7 +9,6 @@ This approach allows for a dynamic visual representation of a plate's compositio
 
 // Import necessary namespaces for Unity functionality
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

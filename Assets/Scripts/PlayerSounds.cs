@@ -9,8 +9,7 @@ The Awake method is used to initialize the player variable by getting the Player
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'PlayerSounds' that inherits from 'MonoBehaviour'

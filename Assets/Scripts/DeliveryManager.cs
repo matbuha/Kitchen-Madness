@@ -8,8 +8,8 @@ The script also keeps track of successfully delivered recipes
 */
 
 // Import necessary namespaces for Unity functionality
+
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

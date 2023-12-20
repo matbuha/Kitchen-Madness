@@ -8,10 +8,8 @@ which is especially relevant if coming back to the main menu from a paused state
 */
 
 // Import necessary namespaces for Unity functionality, scene management, and UI handling
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 // Declare a public class 'MainMenuUI' that inherits from 'MonoBehaviour'

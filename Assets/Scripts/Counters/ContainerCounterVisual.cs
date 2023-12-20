@@ -7,8 +7,7 @@ This behavior is typically used to visually represent the interaction of a playe
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'ContainerCounterVisual' that inherits from 'MonoBehaviour'

@@ -7,8 +7,7 @@ The Awake method is used to initialize the animator variable by getting the Anim
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'PlayerAnimator' that inherits from 'MonoBehaviour'

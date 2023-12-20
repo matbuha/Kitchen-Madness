@@ -8,8 +8,7 @@ This is useful for scenarios like making a UI element always face the camera or 
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'LookAtCamera' that inherits from 'MonoBehaviour'

@@ -8,10 +8,8 @@ This interface allows objects implementing it to notify listeners about their pr
 */
 
 // Import necessary namespaces for Unity functionality and system functions
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 // Declare a public interface 'IHasProgress'
 public interface IHasProgress {

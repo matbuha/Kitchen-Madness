@@ -10,8 +10,7 @@ making it easier to manage and configure different cutting recipes in the game.
  
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Attribute to make this class appear in the Create Asset menu in Unity, allowing for the creation of scriptable objects from it

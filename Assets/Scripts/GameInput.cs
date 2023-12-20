@@ -8,9 +8,8 @@ The script uses a singleton pattern for easy access from other scripts.
 */
 
 // Import necessary namespaces for Unity functionality and input system
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

@@ -8,8 +8,7 @@ Each icon is activated and configured with the corresponding KitchenObjectSO (a 
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'PlateIconsUI' that inherits from 'MonoBehaviour'

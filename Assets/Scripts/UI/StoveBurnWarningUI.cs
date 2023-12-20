@@ -7,9 +7,7 @@ The Show and Hide methods control the visibility of this warning UI.
 */
 
 // Import necessary namespaces for Unity functionality
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'StoveBurnWarningUI' that inherits from 'MonoBehaviour'

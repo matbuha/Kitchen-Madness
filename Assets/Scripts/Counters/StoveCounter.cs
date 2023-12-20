@@ -8,11 +8,9 @@ allowing them to add or remove kitchen objects from the stove.
 The class also contains helper methods to work with recipes and determine the output based on the input kitchen objects.
 */
 // Import necessary namespaces for Unity functionality and system functions
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static CuttingCounter; // Import static members of the CuttingCounter class
 
 // Declare a public class 'StoveCounter' that inherits from 'BaseCounter' and implements the 'IHasProgress' interface
 public class StoveCounter : BaseCounter, IHasProgress {

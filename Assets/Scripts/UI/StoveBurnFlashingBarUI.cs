@@ -6,8 +6,7 @@ The IS_FLASHING constant is used as a parameter name in the animator to control 
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'StoveBurnFlashingBarUI' that inherits from 'MonoBehaviour'

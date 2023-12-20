@@ -8,8 +8,7 @@ to avoid carrying over previous state information or event subscriptions.
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'RestStaticDataManager' that inherits from 'MonoBehaviour'

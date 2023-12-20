@@ -1,6 +1,5 @@
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'CuttingCounterVisual' that inherits from 'MonoBehaviour'

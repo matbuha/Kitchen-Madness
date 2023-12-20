@@ -8,8 +8,7 @@ ongoing, or completed).
 */
 
 // Import necessary namespaces for Unity functionality and UI handling
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 

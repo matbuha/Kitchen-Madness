@@ -7,8 +7,7 @@ The script also includes functionality to save and load volume settings using Pl
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'SoundManager' that inherits from 'MonoBehaviour'

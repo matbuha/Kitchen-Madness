@@ -12,9 +12,8 @@ and the script maintains the state related to player movement and selected count
 */
 
 // Import necessary namespaces for Unity functionality
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // Declare a public class 'Player' that inherits from 'MonoBehaviour' and implements 'IKitchenObjectParent'

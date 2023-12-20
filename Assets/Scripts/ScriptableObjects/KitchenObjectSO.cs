@@ -9,8 +9,7 @@ The prefab and sprite allow for versatile use of the kitchen object in both 3D a
  
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Attribute to make this class appear in the Create Asset menu in Unity, allowing for the creation of scriptable objects from it

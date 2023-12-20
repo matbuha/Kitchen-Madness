@@ -9,9 +9,7 @@ as well as a SoundManager for additional sound effects.
  
 
 // Import necessary namespaces for Unity functionality and system functions
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'StoveCounterSound' that inherits from 'MonoBehaviour'

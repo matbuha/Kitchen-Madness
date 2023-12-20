@@ -9,12 +9,10 @@ The UpdateVisual method updates the UI elements to reflect the current settings.
 */
 
 // Import necessary namespaces for Unity functionality, UI handling, and text handling
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 // Declare a public class 'OptionsUI' that inherits from 'MonoBehaviour'

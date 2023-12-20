@@ -10,7 +10,6 @@ The script is designed to manage the composition of a plate in a cooking or kitc
 
 // Import necessary namespaces for Unity functionality
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -7,8 +7,7 @@ the script updates the UI to reflect these changes by destroying old elements an
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'DeliveryManagerUI' that inherits from 'MonoBehaviour'

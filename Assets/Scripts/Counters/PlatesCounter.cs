@@ -10,9 +10,8 @@ which can be used for other game mechanics or visual feedback.
  
 
 // Import necessary namespaces for Unity functionality and system functions
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // Declare a public class 'PlatesCounter' that inherits from 'BaseCounter'

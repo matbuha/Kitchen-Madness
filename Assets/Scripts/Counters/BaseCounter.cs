@@ -3,9 +3,8 @@ This script is dealing with kitchen objects and counters.
 Each method and property has a specific role in the gameplay mechanics related to kitchen objects.
 */
 // Import necessary libraries and namespaces
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // Declare a public class 'BaseCounter' that inherits from 'MonoBehaviour' and implements the 'IKitchenObjectParent' interface

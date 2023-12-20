@@ -7,8 +7,7 @@ allowing the image to visually represent the passage of time in the game.
 */
 
 // Import necessary namespaces for Unity functionality and UI handling
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 

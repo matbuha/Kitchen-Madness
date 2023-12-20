@@ -8,9 +8,8 @@ The script listens to pause input via the GameInput class and updates the game's
 */
 
 // Import necessary namespaces for Unity functionality
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // Declare a public class 'KitchenGameManager' that inherits from 'MonoBehaviour'

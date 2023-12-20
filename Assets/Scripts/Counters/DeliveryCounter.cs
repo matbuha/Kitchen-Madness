@@ -6,9 +6,6 @@ It utilizes a singleton pattern for the DeliveryCounter instance and interacts w
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 // Declare a public class 'DeliveryCounter' that inherits from 'BaseCounter'
 public class DeliveryCounter : BaseCounter {

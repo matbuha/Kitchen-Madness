@@ -8,8 +8,7 @@ The Show and Hide methods activate and deactivate these visual elements, respect
 */
 
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'SelectedCounterVisual' that inherits from 'MonoBehaviour'

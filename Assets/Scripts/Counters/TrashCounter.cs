@@ -9,10 +9,8 @@ maintaining the integrity of the event management in the game.
  
 
 // Import necessary namespaces for Unity functionality and system functions
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 // Declare a public class 'TrashCounter' that inherits from 'BaseCounter'
 public class TrashCounter : BaseCounter {

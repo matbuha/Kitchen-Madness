@@ -4,8 +4,7 @@ likely involving gameplay mechanics around kitchen objects, plates, and ingredie
 The Interact method handles various scenarios based on whether the player or the counter has a kitchen object and what type of object it is (like a plate).
 */
 // Import necessary namespaces for Unity functionality
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 // Declare a public class 'ClearCounter' that inherits from 'BaseCounter'
