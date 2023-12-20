@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<test-run id="2" testcasecount="2" result="Passed" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2023-12-19 22:10:07Z" end-time="2023-12-19 22:10:07Z" duration="0.0585209">
-  <test-suite type="TestSuite" id="1000" name="SimpleTempleteProject" fullname="SimpleTempleteProject" runstate="Runnable" testcasecount="2" result="Passed" start-time="2023-12-19 22:10:07Z" end-time="2023-12-19 22:10:07Z" duration="0.058521" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+<test-run id="2" testcasecount="2" result="Passed" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2023-12-20 09:34:36Z" end-time="2023-12-20 09:34:36Z" duration="0.0583036">
+  <test-suite type="TestSuite" id="1000" name="SimpleTempleteProject" fullname="SimpleTempleteProject" runstate="Runnable" testcasecount="2" result="Passed" start-time="2023-12-20 09:34:36Z" end-time="2023-12-20 09:34:36Z" duration="0.058304" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
     <properties />
-    <test-suite type="Assembly" id="1004" name="Tests.dll" fullname="/github/workspace/Library/ScriptAssemblies/Tests.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2023-12-19 22:10:07Z" end-time="2023-12-19 22:10:07Z" duration="0.049898" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <test-suite type="Assembly" id="1004" name="Tests.dll" fullname="/github/workspace/Library/ScriptAssemblies/Tests.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2023-12-20 09:34:36Z" end-time="2023-12-20 09:34:36Z" duration="0.049527" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
       <properties>
-        <property name="_PID" value="1267" />
+        <property name="_PID" value="1260" />
         <property name="_APPDOMAIN" value="Unity Child Domain" />
         <property name="platform" value="PlayMode" />
       </properties>
-      <test-suite type="TestFixture" id="1001" name="PlayModeTests" fullname="PlayModeTests" classname="PlayModeTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2023-12-19 22:10:07Z" end-time="2023-12-19 22:10:07Z" duration="0.048325" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestFixture" id="1001" name="PlayModeTests" fullname="PlayModeTests" classname="PlayModeTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2023-12-20 09:34:36Z" end-time="2023-12-20 09:34:36Z" duration="0.047907" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
         <properties />
-        <test-case id="1002" name="PlayModeTestsSimplePasses" fullname="PlayModeTests.PlayModeTestsSimplePasses" methodname="PlayModeTestsSimplePasses" classname="PlayModeTests" runstate="Runnable" seed="1741851633" result="Passed" start-time="2023-12-19 22:10:07Z" end-time="2023-12-19 22:10:07Z" duration="0.012650" asserts="0">
+        <test-case id="1002" name="PlayModeTestsSimplePasses" fullname="PlayModeTests.PlayModeTestsSimplePasses" methodname="PlayModeTestsSimplePasses" classname="PlayModeTests" runstate="Runnable" seed="2073441015" result="Passed" start-time="2023-12-20 09:34:36Z" end-time="2023-12-20 09:34:36Z" duration="0.012656" asserts="0">
           <properties />
         </test-case>
-        <test-case id="1003" name="PlayModeTestsWithEnumeratorPasses" fullname="PlayModeTests.PlayModeTestsWithEnumeratorPasses" methodname="PlayModeTestsWithEnumeratorPasses" classname="PlayModeTests" runstate="Runnable" seed="1302768979" result="Passed" start-time="2023-12-19 22:10:07Z" end-time="2023-12-19 22:10:07Z" duration="0.014277" asserts="0">
+        <test-case id="1003" name="PlayModeTestsWithEnumeratorPasses" fullname="PlayModeTests.PlayModeTestsWithEnumeratorPasses" methodname="PlayModeTestsWithEnumeratorPasses" classname="PlayModeTests" runstate="Runnable" seed="23126082" result="Passed" start-time="2023-12-20 09:34:36Z" end-time="2023-12-20 09:34:36Z" duration="0.013879" asserts="0">
           <properties>
             <property name="_JOINTYPE" value="UnityCombinatorial" />
           </properties>
