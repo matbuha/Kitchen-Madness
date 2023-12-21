@@ -967,7 +967,7 @@ PrefabInstance:
     - target: {fileID: 797601818540915052, guid: e48bfba820c5baf459c84ee87ab0fcae,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2661453215983357314, guid: e48bfba820c5baf459c84ee87ab0fcae,
         type: 3}
@@ -1284,6 +1284,8 @@ GameObject:
   - component: {fileID: 204719616}
   - component: {fileID: 204719615}
   - component: {fileID: 204719614}
+  - component: {fileID: 204719618}
+  - component: {fileID: 204719617}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -1361,6 +1363,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204719612}
   m_CullTransparentMesh: 1
+--- !u!114 &204719617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204719612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1
+--- !u!114 &204719618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204719612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &235221826
 GameObject:
   m_ObjectHideFlags: 0
@@ -3031,7 +3063,7 @@ PrefabInstance:
     - target: {fileID: 264940039857722951, guid: 93ea09c38530b354089f5c94a054f32b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3194044623780258473, guid: 93ea09c38530b354089f5c94a054f32b,
         type: 3}
@@ -3128,6 +3160,7 @@ RectTransform:
   - {fileID: 1539055898}
   - {fileID: 1262358408}
   - {fileID: 420925866}
+  - {fileID: 2019645876}
   m_Father: {fileID: 2061711125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9128,7 +9161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1489028245
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9316,7 +9349,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4a29af9323b302144b966350f6bbe298, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e8e5bba6e9846b740b77349778079b5d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.05
   m_Pitch: 1
@@ -10375,7 +10408,7 @@ PrefabInstance:
     - target: {fileID: 8839242215206057202, guid: 843a2500121a24146b38ca3f1ef2f6fe,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8868823956284388441, guid: 843a2500121a24146b38ca3f1ef2f6fe,
         type: 3}
@@ -11938,7 +11971,7 @@ PrefabInstance:
     - target: {fileID: 264940039857722951, guid: 93ea09c38530b354089f5c94a054f32b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3194044623780258473, guid: 93ea09c38530b354089f5c94a054f32b,
         type: 3}
@@ -12134,7 +12167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1886683954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13489,8 +13522,6 @@ GameObject:
   - component: {fileID: 2019645881}
   - component: {fileID: 2019645880}
   - component: {fileID: 2019645879}
-  - component: {fileID: 2019645878}
-  - component: {fileID: 2019645877}
   m_Layer: 5
   m_Name: OptionsAndroidButton
   m_TagString: Untagged
@@ -13511,43 +13542,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 204719613}
-  m_Father: {fileID: 2061711125}
+  m_Father: {fileID: 525638878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 100, y: -100}
   m_SizeDelta: {x: 120, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2019645877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019645875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.80784315}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
---- !u!114 &2019645878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019645875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
-  m_UseGraphicAlpha: 1
 --- !u!114 &2019645879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13605,14 +13606,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 44304d8ce9d39404883bcd1675cd35b8, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14030,7 +14031,6 @@ RectTransform:
   - {fileID: 1135519065}
   - {fileID: 1981632505}
   - {fileID: 563966395}
-  - {fileID: 2019645876}
   - {fileID: 1489028245}
   - {fileID: 248380274}
   - {fileID: 1886683954}
