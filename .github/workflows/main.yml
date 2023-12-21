@@ -94,4 +94,8 @@ jobs:
   #         ITCH_GAME: Kitchen-Madness
   #         ITCH_USER: Erzelman
   #         BRANCH: itch-io
+<<<<<<< HEAD
   #         PACKAGE: build/WebGL
+=======
+  #         PACKAGE: build/WebGL
+>>>>>>> parent of 4b955f6e (fixing build name)
