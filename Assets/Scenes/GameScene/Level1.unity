@@ -704,7 +704,7 @@ GameObject:
   - component: {fileID: 93794758}
   - component: {fileID: 93794759}
   m_Layer: 5
-  m_Name: Container
+  m_Name: RecipeTemplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
