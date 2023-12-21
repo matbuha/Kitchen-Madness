@@ -94,4 +94,4 @@ jobs:
           ITCH_GAME: Kitchen-Madness
           ITCH_USER: Erzelman
           BRANCH: Itchio-Artifact
-          PACKAGE: Kitchen-Madness
+          PACKAGE: build
