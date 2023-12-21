@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Build Settings
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 99
+  controlID: 96
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 247
+  controlID: 61
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -217,8 +217,8 @@ MonoBehaviour:
     y: 0
     width: 307
     height: 384
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -697,7 +697,7 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: UnityEditor.SceneViewCameraOverlay
-      index: 11
+      index: 10
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
@@ -777,9 +777,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 754.1434, y: 522.01373, z: 10.439405}
+    m_Target: {x: 1115.3232, y: 604.5189, z: 3.034773}
     speed: 2
-    m_Value: {x: 754.1434, y: 522.01373, z: 10.439405}
+    m_Value: {x: 1115.3232, y: 604.5189, z: 3.034773}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -827,11 +827,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: -0, y: 0, z: -0, w: -0.99999994}
+    m_Value: {x: -0, y: 0, z: -0, w: -1}
   m_Size:
-    m_Target: 612.40814
+    m_Target: 797.976
     speed: 2
-    m_Value: 612.40814
+    m_Value: 797.976
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -849,7 +849,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.3553618, y: 0.006166458, z: -0.0023445287, w: -0.93470556}
+  m_LastSceneViewRotation: {x: -0.40940335, y: 0.0060187955, z: -0.0027009728, w: -0.91233003}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -1018,9 +1018,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 86720000
-      m_LastClickedID: 0
-      m_ExpandedIDs: c274ffff6eefffff4cf9ffff0afbffff3e810000b681000034840000da840000
+      m_SelectedIDs: 3604fcff
+      m_LastClickedID: -261066
+      m_ExpandedIDs: e60efcff8e1cfcff302afcffd437fcff7c45fcff1e53fcff9059fcfffc59fcff1c64fcff2a73fcff207dfcff1687fcff0e91fcff049bfcfffaa4fcfff0aefcfff2b8fcffe8c2fcffdeccfcff10d7fcff74e9fcff30f8fcff080dfdff1817fdff2621fdff462bfdff5635fdff3a43fdffde52fdff3071fdffe27dfdff3c8bfdff2e98fdff84a4fdffeaa7fdffc24bfeffeae20000aee300001420010042210100de8e0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1089,8 +1089,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 1
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Scenes/GameScene
+    m_Folders: []
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1099,14 +1098,14 @@ MonoBehaviour:
   m_StartGridSize: 96
   m_LastFolders: []
   m_LastFoldersGridSize: 96
-  m_LastProjectPath: "C:\\Users\\ariel\\OneDrive\\\u05DE\u05E1\u05DE\u05DB\u05D9\u05DD\\GitHub\\Kitchen-Madness"
+  m_LastProjectPath: C:\Users\ariel\Downloads\KitchenMadness\Kitchen-Madness
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e8a90000
     m_LastClickedID: 43496
-    m_ExpandedIDs: 000000002c6f000040720000427200004472000046720000487200004a7200004c7200004e72000050720000527200005472000056720000587200005a7200005c7200005e720000607200006272000064720000
+    m_ExpandedIDs: 00000000c24100006e4200007642000092420000f2420000f64200004e4300009e430000b64300004a4400002245000052450000be4500006a480000b0ba00006cbb000042dd0000e4ea0000e6ea0000e8ea0000eaea0000ecea0000eeea0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1131,24 +1130,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 60}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000002c6f000040720000427200004472000046720000487200004a7200004c7200004e72000050720000527200005472000056720000587200005a7200005c7200005e720000607200006272000064720000767200007a72000082720000
+    m_ExpandedIDs: ffffffff00000000c24100006e4200007642000092420000ee420000f24200004e4300009e430000b643000022450000524500006a480000b0ba00006cbb000042dd0000e4ea0000e6ea0000e8ea0000eaea0000ecea0000eeea0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Level8
+      m_OriginalName: Level8
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 88240
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -1262,7 +1261,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -792520
+  m_LastSelectedObjectID: -261066
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1319,9 +1318,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2848
+    x: 2809
     y: 73
-    width: 607
+    width: 646
     height: 918
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1339,7 +1338,7 @@ MonoBehaviour:
     m_CachedPref: 271
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 34010
+  m_LastInspectedObjectInstanceID: -261066
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
