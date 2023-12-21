@@ -91,7 +91,7 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
           CHANNEL: HTML
-          ITCH_GAME: Kitchen-Madness
+          ITCH_GAME: kitchen-madness
           ITCH_USER: Erzelman
           BRANCH: Itchio-Artifact
           PACKAGE: build
