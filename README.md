@@ -6,7 +6,8 @@ Join the frantic fun in 'Kitchen Madness' as you race against time to whip up a 
 
 You can play this game here: [Kitchen-Madness](https://erzelman.itch.io/kitchen-madness)
 
-![Alt text for your GIF]([URL_of_your_GIF.gif](https://github.com/matbuha/Kitchen-Madness/blob/main/Assets/_Assets/Animations/ShortVid.gif))
+![Gameplay preview](https://github.com/matbuha/Kitchen-Madness/blob/main/Assets/_Assets/Animations/ShortVid.gif)
+
 
 
 
