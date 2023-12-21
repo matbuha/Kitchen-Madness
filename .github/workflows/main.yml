@@ -3,8 +3,8 @@ name: Actions 😎
 on: [push]
 
 jobs:
-  build:
-    name: Build my project ✨
+  BuildProject:
+    name: Build and deploy the game ✨
     runs-on: ubuntu-latest
     steps:
       # Checkout
@@ -64,8 +64,8 @@ jobs:
           name: kitchen-madness
           path: build
 
-  deployPages:
-    needs: build
+  deployToItchIo:
+    needs: BuildProject
     name: Deploy to Itch.io 🚀
     runs-on: ubuntu-latest
     steps:
@@ -84,7 +84,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          branch: itchio-Production
+          branch: Itchio-Artifact
           folder: build
           
       - uses: manleydev/butler-publish-itchio-action@master
@@ -93,5 +93,5 @@ jobs:
           CHANNEL: HTML
           ITCH_GAME: Kitchen-Madness
           ITCH_USER: Erzelman
-          BRANCH: itchio-Production
-          PACKAGE: build
+          BRANCH: Itchio-Artifact
+          PACKAGE: Kitchen-Madness
