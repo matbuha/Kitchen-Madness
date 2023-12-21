@@ -21,7 +21,7 @@ jobs:
           restore-keys: |
             Library-
 
-      # Test
+      # Test the project
       # - name: Run tests
       #   uses: game-ci/unity-test-runner@v4
       #   env:
