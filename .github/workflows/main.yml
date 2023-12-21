@@ -1,42 +1,97 @@
-name: Build project
+name: Actions 😎
 
 on: [push]
 
 jobs:
-  buildForAllSupportedPlatforms:
-    name: Build for ${{ matrix.targetPlatform }}
+  build:
+    name: Build my project ✨
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        targetPlatform:
-          #- StandaloneOSX # Build a macOS standalone (Intel 64-bit).
-          #- StandaloneWindows # Build a Windows standalone.
-          - StandaloneWindows64 # Build a Windows 64-bit standalone.
-          #- StandaloneLinux64 # Build a Linux 64-bit standalone.
-          #- iOS # Build an iOS player.
-          #- Android # Build an Android .apk standalone app.
-          #- WebGL # WebGL.
     steps:
-      - uses: actions/checkout@v4
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0
           lfs: true
+
+      # Cache
       - uses: actions/cache@v3
         with:
           path: Library
-          key: Library-${{ matrix.targetPlatform }}
-          restore-keys: Library-
-      #- if: matrix.targetPlatform == 'Android'
-      #  uses: jlumbroso/free-disk-space@v1.3.1
-      - uses: game-ci/unity-builder@v4
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      # Test
+      # - name: Run tests
+      #   uses: game-ci/unity-test-runner@v4
+      #   env:
+      #     UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      #     UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      #     UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+      #   with:
+      #     githubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'matbuha'
+          git config --global user.email 'arielbenzikri@gmail.com'
+
+      - name: Commit changes
+        run: |
+          git add .
+          git diff --staged --quiet || git commit -m "Committing changes from GitHub Actions"
+          git push
+
+      - name: Clean up Docker space
+        run: |
+          docker system prune -af
+          sudo rm -rf /usr/local/share/dotnet
+          sudo rm -rf /usr/share/swift
+
+      # Build
+      - name: Build project
+        uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          targetPlatform: ${{ matrix.targetPlatform }}
-      - uses: actions/upload-artifact@v3
+          targetPlatform: WebGL
+
+      # Output
+      - uses: actions/upload-artifact@v4
         with:
-          name: Build-${{ matrix.targetPlatform }}
-          path: build/${{ matrix.targetPlatform }}
+          name: kitchen-madness
+          path: build
+
+  deployPages:
+    needs: build
+    name: Deploy to Itch.io 🚀
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: kitchen-madness
+          path: build
+
+      - name: Display structure of root files
+        run: ls -R
+        working-directory: build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: itchio-Production
+          folder: build
+          
+      - uses: manleydev/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
+          CHANNEL: HTML
+          ITCH_GAME: Kitchen-Madness
+          ITCH_USER: Erzelman
+          BRANCH: itchio-Production
+          PACKAGE: build
