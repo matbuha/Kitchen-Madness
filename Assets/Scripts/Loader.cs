@@ -11,6 +11,9 @@ public static class Loader {
         Level3,
         Level4,
         Level5,
+        Level6,
+        Level7,
+        Level8,
         LoadingScene,
         // Add other scenes here if needed
     }
