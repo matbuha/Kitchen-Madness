@@ -84,7 +84,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          branch: Itchio-Artifact
+          branch: Itchio-production
           folder: build
           
       - uses: manleydev/butler-publish-itchio-action@master
@@ -93,5 +93,5 @@ jobs:
           CHANNEL: HTML
           ITCH_GAME: kitchen-madness
           ITCH_USER: Erzelman
-          BRANCH: Itchio-Artifact
+          BRANCH: Itchio-production
           PACKAGE: build
