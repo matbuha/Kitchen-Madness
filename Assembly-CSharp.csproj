@@ -115,6 +115,7 @@
     <Compile Include="Assets\Scripts\GameInput.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RecipeListSo.cs" />
     <Compile Include="Assets\Scripts\KitchenObject.cs" />
+    <Compile Include="Assets\Scripts\DeviceTypeChecker.cs" />
     <Compile Include="Assets\Scripts\UI\PlateIconsSingleUI.cs" />
     <Compile Include="Assets\Scripts\RestStaticDataManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\RecipeSO.cs" />

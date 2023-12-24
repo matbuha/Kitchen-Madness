@@ -4481,6 +4481,7 @@ GameObject:
   - component: {fileID: 758887869}
   - component: {fileID: 758887868}
   - component: {fileID: 758887867}
+  - component: {fileID: 758887871}
   - component: {fileID: 758887866}
   - component: {fileID: 758887870}
   m_Layer: 5
@@ -4592,6 +4593,21 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.6156863}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &758887871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758887864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91406b0d67fec74787165f0e7793ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interact: {fileID: 1989347988}
+  interactAlternate: {fileID: 758887864}
+  movementAndroidButtons: {fileID: 1489028244}
 --- !u!1 &768884832
 GameObject:
   m_ObjectHideFlags: 0
@@ -9324,6 +9340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1489028245}
   - component: {fileID: 1489028246}
+  - component: {fileID: 1489028247}
   m_Layer: 5
   m_Name: MovementAndroidButtonsUI
   m_TagString: Untagged
@@ -9363,6 +9380,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc43b48159ed3104c8b333081a263f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1489028247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489028244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91406b0d67fec74787165f0e7793ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interact: {fileID: 1989347988}
+  interactAlternate: {fileID: 758887864}
+  movementAndroidButtons: {fileID: 1489028244}
 --- !u!1 &1500938420
 GameObject:
   m_ObjectHideFlags: 0
@@ -13269,6 +13301,7 @@ GameObject:
   - component: {fileID: 1989347993}
   - component: {fileID: 1989347992}
   - component: {fileID: 1989347991}
+  - component: {fileID: 1989347995}
   - component: {fileID: 1989347990}
   - component: {fileID: 1989347994}
   m_Layer: 5
@@ -13380,6 +13413,21 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.62352943}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &1989347995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989347988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91406b0d67fec74787165f0e7793ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interact: {fileID: 1989347988}
+  interactAlternate: {fileID: 758887864}
+  movementAndroidButtons: {fileID: 1489028244}
 --- !u!1001 &1994871374
 PrefabInstance:
   m_ObjectHideFlags: 0
